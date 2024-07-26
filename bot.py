@@ -217,7 +217,7 @@ def play_game(api, debug = False):
 
 def main(debug = False):
     #  Creates api object
-    token = "b35411393ae0f9dcb8ec2bf6d8d61d9d" # os.environ['TOKEN']
+    token = open("token.txt","rt").read().strip() # os.environ['TOKEN']
     debug = ('DEBUG' in os.environ) or ('--debug' in sys.argv) or debug
     while(True):
         print("-" * 50)
